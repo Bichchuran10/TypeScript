@@ -1,0 +1,47 @@
+
+
+1.
+npm install --save-dev @types/node
+This package is used to load in all type definitions when using typescript in node
+
+These are packages which provides TS translation for JS features.
+We can use nodeJs syntax in our TS file.
+dts files -> trasnlations , ts understands.
+
+2.
+npm install --save-dev @types/express
+
+to catch any error while using express syntax
+This package contains type definitions for Express
+3.
+"moduleResolution": "node"
+"target":"es6"
+
+Module resolution is the process the compiler uses to figure out what an import refers to.
+
+4. 
+npm install --save-dev @types/body-parser
+
+use it for bodyParser. It helps. register bodyParser middleware in app.js
+
+5. create model of todo -> interface Todo with id and text with type string.
+6. create todos route . get,post . 
+
+** import **
+Loading is asynchronous in import (i.e., modules are imported without waiting for previous module import to complete.)
+Because the Asynchronous loading performance of import is better than required.
+Using import we can selectively load pieces of code in the module. So, memory usage is less compared to require.
+import includes components exported by export in the module.
+To use import in our project we need to enable ES6 or ECMAScript module in our project.
+import works only at the top of the program
+import {abc,xyz} from "./path"
+if there are more than one export in the file then we need to use curly braces in the import file so that which are necessary we can import.
+
+-> A default export can only export a single object, function, or variable and curly braces are omitted when importing in various files.
+import anyNameWillWork from './greeting';
+
+-> Named exports allow us to share multiple objects, functions or variables from a single file and were introduced with the release of ES2015.
+Named exports are imported with curly braces in various files and must be imported using the name of the object, function or variable that was exported.
+import { greeting, bestMovieSeries } from './greeting';
+
+
