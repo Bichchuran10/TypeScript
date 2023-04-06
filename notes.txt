@@ -1,0 +1,14 @@
+1. The main benefit of Typescript is that it offers the ability to add static types to your Javascript code.
+
+Example-
+
+If we write a function to add two numbers and we pass two strings it will concatenate it in JS. But in TypeScript , 
+it will throw an error as type will be set to numbers.
+
+2.
+
+TypeScript always points out the compilation errors at the time of development (pre-compilation).
+Because of this getting runtime errors is less likely, whereas JavaScript is an interpreted language.
+TypeScript supports static/strong typing. This means that type correctness can be checked at compile time. This feature is not available in JavaScript.
+TypeScript is nothing but JavaScript and some additional features i.e. ES6 features. 
+It may not be supported in your target browser but the TypeScript compiler can compile the .ts files into ES3, ES4, and ES5 also.
