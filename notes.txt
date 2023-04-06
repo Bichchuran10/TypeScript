@@ -12,3 +12,119 @@ Because of this getting runtime errors is less likely, whereas JavaScript is an 
 TypeScript supports static/strong typing. This means that type correctness can be checked at compile time. This feature is not available in JavaScript.
 TypeScript is nothing but JavaScript and some additional features i.e. ES6 features. 
 It may not be supported in your target browser but the TypeScript compiler can compile the .ts files into ES3, ES4, and ES5 also.
+
+
+3.
+In terms of software development, TypeScript offers many advantages over JavaScript: Optional static typing.
+JavaScript is a dynamically typed language, which means that types are checked, and data type errors are only detected at runtime. 
+This can be very dangerous and can create errors during production.
+
+4. Compilation
+
+The TypeScript compiler, named tsc , is written in TypeScript.
+ As a result, it can be compiled into regular JavaScript and can then be executed in any JavaScript engine (e.g. a browser).
+ Example -> tsc app.ts will convert it into app.js i.e a JavaScript file
+
+
+
+ 5. TYPES :
+ Boolean,String,Number,Array
+
+ 6. INFER
+
+TypeScript infers types of variables when there is no explicit information available in the form of type annotations.
+
+Types are inferred by TypeScript compiler when:
+
+i.Variables are initialized
+
+ii.Default values are set for parameters
+
+iii.Function return types are determined
+
+For example,
+
+var a = "some text"
+
+Here, since we are not explicitly defining a: string with a type annotation, TypeScript infers the type of the variable based on the value assigned to the variable. The value of a is a string and hence the type of a is inferred as string.
+
+Consider the following example:
+
+var a = "some text";
+var b = 123;
+a = b; // Compiler Error: Type 'number' is not assignable to type 'string'
+
+The above code shows an error because while inferring types, TypeScript inferred the type of variable a as string and variable b as number.
+When we try to assign b to a, the compiler complains saying a number type cannot be assigned to a string type.
+
+Thus, type inference is helpful in type-checking when there are no explicit type annotations available.
+
+
+7.
+
+tsc --init 
+
+A command to initialize TypeScript and Webpack.
+It adds tsconfig.json
+
+8. Strict Mode 
+
+The TypeScript team puts a lot of effort to make rule checks during the whole transpilation to JavaScript magic. 
+This set of rules is often called "strict mode". 
+It represents a collection of automatic checks that tighten the verification of your TypeScript code.
+
+9.
+Exclamation mark ! 
+In TypeScript, the exclamation mark acts as a non-null assertion operator. This non-null assertion will remove null and undefined values.
+
+10. type : any
+DO NOT USE
+Because any doesn't carry extra type information, any kind of value is allowed.
+
+11. Arrays 
+We specify types in the array
+Example->
+const names: string[] = []; //string[] means array of strings
+names.push("Dylan"); // no error
+// names.push(3); // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+12. TYPE 
+
+The type keyword defines an alias to a type.
+
+13 INTERFACE 
+
+Interfaces are basically a way to describe data shapes, for example, an object.
+
+In TypeScript, we can easily extend and implement interfaces. This is not possible with types though.
+
+Interfaces in TypeScript can extend classes, this is a very awesome concept that helps a lot in a more object-oriented way of programming. 
+We can also create classes implementing interfaces.
+For example, let’s imagine that we have a class called Car and an interface called NewCar, we can easily extend this class using an interface.
+
+class Car {
+  printCar = () => {
+    console.log("this is my car")
+  }
+};
+
+interface NewCar extends Car {
+  name: string;
+};
+
+class NewestCar implements NewCar {
+  name: "Car";
+  constructor(engine:string) {
+    this.name = name
+  }
+  printCar = () => {
+    console.log("this is my car")
+  }
+}
+
+
+
+14. GENERICS 
+
+Generics as a way to represent types without explicitly defining a type. A generic type is generic in that it’s like a function parameter— able to represent anything. 
+Also like a parameter in a function, its value can be passed as an argument (via <SomeType>) and referenced throughout the body of the function
