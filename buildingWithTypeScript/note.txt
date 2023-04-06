@@ -45,3 +45,14 @@ Named exports are imported with curly braces in various files and must be import
 import { greeting, bestMovieSeries } from './greeting';
 
 
+**interface
+in model-> todo.ts is almost empty
+ interfaces are pure type of features which helps typeScript during compilation,
+ but which generates no actual code.
+
+ **TypeCasting**
+ Type casting allows you to convert a variable from one type to another.
+Use the as keyword or <> operator for type castings.
+
+"outDir":"./dist" -> creates a dist sub folder where all our compiled file say,generated javascript files will be stored in.
+ "rootDir": "./src",   that's where typeScript code is stored
